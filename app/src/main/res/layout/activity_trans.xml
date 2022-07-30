@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".TransActivity">
+
+    <TextView android:id="@+id/biaya_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dikenakan Biaya Admin \nRp. 4000"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <LinearLayout android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout android:id="@+id/bank_tujuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank Tujuan"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"/>
+            <EditText android:id="@+id/et_bank_tujuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:text="002"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/no_rekening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Rekening"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"/>
+            <EditText android:id="@+id/et_no_rekening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:text="1234567890123456"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/nominal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nominal"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"/>
+            <EditText android:id="@+id/et_nominal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:text="10000"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/no_hp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No. Handphone"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"/>
+            <EditText android:id="@+id/et_no_hp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:text="089912345678"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/berita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Berita"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"/>
+            <EditText android:id="@+id/et_berita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:text="Test Transfer"
+                android:inputType="text"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:text="Lanjutkan"
+        android:textSize="20sp"/>
+
+
+
+</LinearLayout>

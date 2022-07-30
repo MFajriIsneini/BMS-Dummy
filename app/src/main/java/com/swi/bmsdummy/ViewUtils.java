@@ -1,0 +1,75 @@
+package com.swi.bmsdummy;
+
+import android.content.Context;
+import android.content.res.Configuration;
+import android.view.Gravity;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import static android.util.TypedValue.COMPLEX_UNIT_PX;
+
+public class ViewUtils {
+    private ViewUtils() {
+        //do nothing
+    }
+
+    /**
+     * 生成每一行记录
+     *
+     * @param title
+     * @param value
+     * @return
+     */
+    public static LinearLayout genSingleLineLayout(Context context, String title, Object value) {
+        LinearLayout layout = new LinearLayout(context);
+        layout.setOrientation(LinearLayout.HORIZONTAL);
+        TextView titleTv = new TextView(context);
+        titleTv.setText(title);
+        titleTv.setTextSize(COMPLEX_UNIT_PX, 16f);
+        titleTv.setTextColor(context.getResources().getColor(android.R.color.primary_text_light));
+
+        layout.addView(titleTv, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT));
+
+        TextView valueTv = new TextView(context);
+        valueTv.setText(String.valueOf(value));
+        valueTv.setGravity(Gravity.END);
+        valueTv.setTextSize(COMPLEX_UNIT_PX, 16f);
+
+        layout.addView(valueTv, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT));
+
+        return layout;
+    }
+
+    /**
+     * 得到设备屏幕的宽度
+     */
+    public static int getScreenWidth(Context context) {
+        return context.getResources().getDisplayMetrics().widthPixels;
+    }
+
+    /**
+     * 得到设备屏幕的高度
+     */
+    public static int getScreenHeight(Context context) {
+        return context.getResources().getDisplayMetrics().heightPixels;
+    }
+
+    public static boolean isScreenOrientationPortrait(Context context) {
+        return context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT;
+    }
+
+    /**
+     * 密度转换为像素值
+     */
+    public static float dp2Px(Context context, int dp) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dp * scale / 160);
+    }
+
+    public static float px2Dp(Context context, int px) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (px / (scale / 160));
+    }
+}
